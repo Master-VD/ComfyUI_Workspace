@@ -2,7 +2,7 @@
   "id": "dcea57b6-22b4-4dac-bc66-14f71d3e2bf6",
   "revision": 0,
   "last_node_id": 143,
-  "last_link_id": 154,
+  "last_link_id": 155,
   "nodes": [
     {
       "id": 3,
@@ -5382,7 +5382,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            90
+            155
           ]
         }
       ],
@@ -5401,161 +5401,6 @@
         0,
         false
       ]
-    },
-    {
-      "id": 94,
-      "type": "GetNode",
-      "pos": [
-        3104.6930636961383,
-        1556.9043129788188
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 42,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            89,
-            91
-          ]
-        }
-      ],
-      "title": "Get_wan_frames_output",
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.4.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "wan_frames_output"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 95,
-      "type": "Any Switch (rgthree)",
-      "pos": [
-        3616.116432465865,
-        1714.5587491001133
-      ],
-      "size": [
-        250.08046875000002,
-        106
-      ],
-      "flags": {},
-      "order": 115,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "any_01",
-          "type": "IMAGE",
-          "link": 90
-        },
-        {
-          "dir": 3,
-          "name": "any_02",
-          "type": "IMAGE",
-          "link": 91
-        },
-        {
-          "dir": 3,
-          "name": "any_03",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "dir": 3,
-          "name": "any_04",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "dir": 3,
-          "name": "any_05",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "label": "IMAGE",
-          "name": "*",
-          "shape": 3,
-          "type": "IMAGE",
-          "links": [
-            92
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "rgthree-comfy",
-        "ver": "1.0.2510052058",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.4.1"
-        }
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 96,
-      "type": "SetNode",
-      "pos": [
-        3878.50415974272,
-        1743.206743873003
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 117,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "link": 92
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_frames_output_1",
-      "properties": {
-        "previousName": "frames_output_1",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.4.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "frames_output_1"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
     },
     {
       "id": 101,
@@ -5722,7 +5567,7 @@
         60
       ],
       "flags": {},
-      "order": 43,
+      "order": 42,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -5761,7 +5606,7 @@
         60
       ],
       "flags": {},
-      "order": 44,
+      "order": 43,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -5799,7 +5644,7 @@
         346
       ],
       "flags": {},
-      "order": 45,
+      "order": 44,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -5922,6 +5767,91 @@
       ],
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 96,
+      "type": "SetNode",
+      "pos": [
+        3630.5105635742902,
+        1743.1417404854512
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 115,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_frames_output_1",
+      "properties": {
+        "previousName": "frames_output_1",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "frames_output_1"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 94,
+      "type": "GetNode",
+      "pos": [
+        3096.7485067846287,
+        1556.9043129788188
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 45,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            89
+          ]
+        }
+      ],
+      "title": "Get_wan_frames_output",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "wan_frames_output"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -6526,30 +6456,6 @@
       "IMAGE"
     ],
     [
-      90,
-      93,
-      0,
-      95,
-      0,
-      "*"
-    ],
-    [
-      91,
-      94,
-      0,
-      95,
-      1,
-      "IMAGE"
-    ],
-    [
-      92,
-      95,
-      0,
-      96,
-      0,
-      "*"
-    ],
-    [
       93,
       97,
       0,
@@ -6892,6 +6798,14 @@
       141,
       1,
       "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      155,
+      93,
+      0,
+      96,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -7055,10 +6969,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.8264462809917354,
+      "scale": 0.7513148009015777,
       "offset": [
-        -590.0668539503811,
-        -220.24684938953024
+        -585.1151642190077,
+        -221.58973641369377
       ]
     },
     "frontendVersion": "1.28.8",
