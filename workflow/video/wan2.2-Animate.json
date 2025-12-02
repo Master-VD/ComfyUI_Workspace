@@ -2,7 +2,7 @@
   "id": "dcea57b6-22b4-4dac-bc66-14f71d3e2bf6",
   "revision": 0,
   "last_node_id": 143,
-  "last_link_id": 155,
+  "last_link_id": 157,
   "nodes": [
     {
       "id": 3,
@@ -1599,98 +1599,6 @@
       ]
     },
     {
-      "id": 29,
-      "type": "ImageResizeKJv2",
-      "pos": [
-        2513.447694937695,
-        -130.78770233790536
-      ],
-      "size": [
-        270,
-        336
-      ],
-      "flags": {},
-      "order": 90,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 23
-        },
-        {
-          "name": "mask",
-          "shape": 7,
-          "type": "MASK",
-          "link": null
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "widget": {
-            "name": "width"
-          },
-          "link": 24
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "widget": {
-            "name": "height"
-          },
-          "link": 28
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            29
-          ]
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [
-            30
-          ]
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [
-            31
-          ]
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "1.1.8",
-        "Node name for S&R": "ImageResizeKJv2",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.4.1"
-        }
-      },
-      "widgets_values": [
-        512,
-        512,
-        "nearest-exact",
-        "crop",
-        "0, 0, 0",
-        "center",
-        2,
-        "cpu"
-      ]
-    },
-    {
       "id": 31,
       "type": "SetNode",
       "pos": [
@@ -1949,7 +1857,7 @@
           ]
         }
       ],
-      "title": "Get_output_res",
+      "title": "Get_shortest_side",
       "properties": {
         "ue_properties": {
           "widget_ue_connectable": {},
@@ -1958,7 +1866,7 @@
         }
       },
       "widgets_values": [
-        "output_res"
+        "shortest_side"
       ],
       "color": "#1b4669",
       "bgcolor": "#29699c"
@@ -2970,96 +2878,6 @@
       ]
     },
     {
-      "id": 54,
-      "type": "SetNode",
-      "pos": [
-        4994.809533756293,
-        284.98589091987566
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 112,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "link": 50
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_character_masks",
-      "properties": {
-        "previousName": "character_masks",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.4.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "character_masks"
-      ],
-      "color": "#1c5715",
-      "bgcolor": "#1f401b"
-    },
-    {
-      "id": 71,
-      "type": "SetNode",
-      "pos": [
-        5034.860200732313,
-        443.414166220501
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 116,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "link": 65
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_bg_video",
-      "properties": {
-        "previousName": "bg_video",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.4.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "bg_video"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 63,
       "type": "GetNode",
       "pos": [
@@ -3874,53 +3692,6 @@
       "bgcolor": "#29699c"
     },
     {
-      "id": 65,
-      "type": "CLIPTextEncode",
-      "pos": [
-        1938.0112244676397,
-        1309.2932985850991
-      ],
-      "size": [
-        421.9531290475097,
-        200
-      ],
-      "flags": {},
-      "order": 54,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 117
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            59
-          ]
-        }
-      ],
-      "title": "CLIP Text Encode (Negative Prompt)",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.67",
-        "Node name for S&R": "CLIPTextEncode",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.4.1"
-        }
-      },
-      "widgets_values": [
-        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，\nbad anatomy, bad proportions, malformed limbs, ugly, mutilated, \nsignature, watermark, username, logo, brand, overlay, stamp,\nNo nipples, bad nipples, pubic hair,"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 70,
       "type": "GetNode",
       "pos": [
@@ -4153,51 +3924,6 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 22,
-      "type": "SetNode",
-      "pos": [
-        1291.1456278447608,
-        1135.9783923351501
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 61,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "link": 15
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_output_res",
-      "properties": {
-        "previousName": "output_res",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.4.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "output_res"
-      ],
-      "color": "#1b4669",
-      "bgcolor": "#29699c"
     },
     {
       "id": 21,
@@ -4445,132 +4171,6 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 30,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        2204.4807857027995,
-        86.37339644162121
-      ],
-      "size": [
-        245.7569583288082,
-        128
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 72,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 25
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 26
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 27
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            28
-          ]
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-custom-scripts",
-        "ver": "1.2.5",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.4.1"
-        }
-      },
-      "widgets_values": [
-        "round(b * (c / min(a,b)) / 16) * 16"
-      ]
-    },
-    {
-      "id": 26,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        2201.9741229192023,
-        -35.866227586113865
-      ],
-      "size": [
-        232.51680644986163,
-        128
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 71,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 17
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 21
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 22
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            24
-          ]
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-custom-scripts",
-        "ver": "1.2.5",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.4.1"
-        }
-      },
-      "widgets_values": [
-        "round(a * (c / min(a,b)) / 16) * 16"
-      ]
-    },
-    {
       "id": 136,
       "type": "MathExpression|pysssss",
       "pos": [
@@ -4782,7 +4382,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 82,
+      "order": 81,
       "mode": 0,
       "inputs": [
         {
@@ -4845,7 +4445,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 65,
+      "order": 64,
       "mode": 0,
       "inputs": [
         {
@@ -5133,48 +4733,6 @@
       "bgcolor": "#29699c"
     },
     {
-      "id": 143,
-      "type": "INTConstant",
-      "pos": [
-        2235.8145082092087,
-        2089.086698480806
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 40,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "links": [
-            151,
-            153
-          ]
-        }
-      ],
-      "title": "Output frame rate",
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "1.1.9",
-        "Node name for S&R": "INTConstant",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.4.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        60
-      ],
-      "color": "#1b4669",
-      "bgcolor": "#29699c"
-    },
-    {
       "id": 137,
       "type": "INTConstant",
       "pos": [
@@ -5186,7 +4744,7 @@
         58
       ],
       "flags": {},
-      "order": 41,
+      "order": 40,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -5215,53 +4773,6 @@
       ],
       "color": "#1b4669",
       "bgcolor": "#29699c"
-    },
-    {
-      "id": 64,
-      "type": "CLIPTextEncode",
-      "pos": [
-        1939.2823731586427,
-        1075.111300190382
-      ],
-      "size": [
-        421.3766031063751,
-        200.41399807941298
-      ],
-      "flags": {},
-      "order": 55,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 125
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            58
-          ]
-        }
-      ],
-      "title": "CLIP Text Encode (Prompt)",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.67",
-        "Node name for S&R": "CLIPTextEncode",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.4.1"
-        }
-      },
-      "widgets_values": [
-        "a nude girl, exposing her breasts and genitals, she is completely naked.\nperfect body, beautiful breasts, huge breasts, beautiful nipples, \nAreola size small, Areola color pink.\nshowing her big perky breasts and innie vagina."
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 84,
@@ -5403,69 +4914,6 @@
       ]
     },
     {
-      "id": 101,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        2830.672129685477,
-        2219.270876656049
-      ],
-      "size": [
-        210,
-        128
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 64,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 136
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 151
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": []
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            97
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-custom-scripts",
-        "ver": "1.2.5",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.4.1"
-        }
-      },
-      "widgets_values": [
-        "b"
-      ]
-    },
-    {
       "id": 106,
       "type": "SetNode",
       "pos": [
@@ -5479,7 +4927,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 81,
+      "order": 82,
       "mode": 0,
       "inputs": [
         {
@@ -5556,45 +5004,6 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 135,
-      "type": "GetNode",
-      "pos": [
-        1980.4861284643116,
-        2196.3224656044595
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {},
-      "order": 42,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            136,
-            145
-          ]
-        }
-      ],
-      "title": "Get_fps_input",
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.4.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "fps_input"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 97,
       "type": "GetNode",
       "pos": [
@@ -5606,7 +5015,7 @@
         60
       ],
       "flags": {},
-      "order": 43,
+      "order": 41,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -5644,7 +5053,7 @@
         346
       ],
       "flags": {},
-      "order": 44,
+      "order": 42,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -5670,6 +5079,91 @@
       },
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 96,
+      "type": "SetNode",
+      "pos": [
+        3630.5105635742902,
+        1743.1417404854512
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 115,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_frames_output_1",
+      "properties": {
+        "previousName": "frames_output_1",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "frames_output_1"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 94,
+      "type": "GetNode",
+      "pos": [
+        3096.7485067846287,
+        1556.9043129788188
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            89
+          ]
+        }
+      ],
+      "title": "Get_wan_frames_output",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "wan_frames_output"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     },
     {
       "id": 2,
@@ -5769,11 +5263,155 @@
       "bgcolor": "#535"
     },
     {
-      "id": 96,
+      "id": 135,
+      "type": "GetNode",
+      "pos": [
+        1980.4861284643116,
+        2196.3224656044595
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            145,
+            157
+          ]
+        }
+      ],
+      "title": "Get_fps_input",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "fps_input"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 143,
+      "type": "INTConstant",
+      "pos": [
+        2235.8145082092087,
+        2089.086698480806
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            153,
+            156
+          ]
+        }
+      ],
+      "title": "Output frame rate",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.9",
+        "Node name for S&R": "INTConstant",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        60
+      ],
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 101,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        2830.672129685477,
+        2219.270876656049
+      ],
+      "size": [
+        210,
+        128
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 156
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 157
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            97
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4.1"
+        }
+      },
+      "widgets_values": [
+        "a"
+      ]
+    },
+    {
+      "id": 22,
       "type": "SetNode",
       "pos": [
-        3630.5105635742902,
-        1743.1417404854512
+        1277.803516770764,
+        1135.9783923351501
       ],
       "size": [
         210,
@@ -5782,13 +5420,13 @@
       "flags": {
         "collapsed": true
       },
-      "order": 115,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "link": 155
+          "name": "INT",
+          "type": "INT",
+          "link": 15
         }
       ],
       "outputs": [
@@ -5798,9 +5436,9 @@
           "links": null
         }
       ],
-      "title": "Set_frames_output_1",
+      "title": "Set_shortest_side",
       "properties": {
-        "previousName": "frames_output_1",
+        "previousName": "shortest_side",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.4.1",
@@ -5808,39 +5446,356 @@
         }
       },
       "widgets_values": [
-        "frames_output_1"
+        "shortest_side"
       ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
     },
     {
-      "id": 94,
-      "type": "GetNode",
+      "id": 29,
+      "type": "ImageResizeKJv2",
       "pos": [
-        3096.7485067846287,
-        1556.9043129788188
+        2513.447694937695,
+        -130.78770233790536
+      ],
+      "size": [
+        270,
+        336
+      ],
+      "flags": {},
+      "order": 90,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 23
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 24
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            29
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            30
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            31
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.8",
+        "Node name for S&R": "ImageResizeKJv2",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4.1"
+        }
+      },
+      "widgets_values": [
+        512,
+        512,
+        "area",
+        "crop",
+        "0, 0, 0",
+        "center",
+        8,
+        "cpu"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        2228.08605914142,
+        79.18918278639133
+      ],
+      "size": [
+        245.7569583288082,
+        128
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 72,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 25
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 26
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            28
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4.1"
+        }
+      },
+      "widgets_values": [
+        "round(b * (c / min(a,b)) / 2) * 2"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        2229.6846613036664,
+        -24.576748985038336
+      ],
+      "size": [
+        232.51680644986163,
+        128
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 17
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 21
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4.1"
+        }
+      },
+      "widgets_values": [
+        "round(a * (c / min(a,b)) / 2) * 2"
+      ]
+    },
+    {
+      "id": 64,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1939.2823731586427,
+        1075.111300190382
+      ],
+      "size": [
+        421.3766031063751,
+        200.41399807941298
+      ],
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 125
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            58
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Prompt)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67",
+        "Node name for S&R": "CLIPTextEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4.1"
+        }
+      },
+      "widgets_values": [
+        "a nude girl, exposing her breasts and genitals, she is completely naked.\nperfect body, beautiful breasts, huge breasts, beautiful nipples, \nareola size small, areola color pink.\nshowing her big perky breasts and innie vagina."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 65,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1938.0112244676397,
+        1309.2932985850991
+      ],
+      "size": [
+        421.9531290475097,
+        200
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 117
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            59
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Negative Prompt)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67",
+        "Node name for S&R": "CLIPTextEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.4.1"
+        }
+      },
+      "widgets_values": [
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，马赛克，卡通崩坏，绘制错误，\nbad anatomy, bad proportions, malformed limbs, ugly, mutilated, \nsignature, watermark, username, overlay, stamp, \nNo nipples, bad nipples, pubic hair,\ndeformed reproductive organs, \nmutated reproductive organs, "
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 54,
+      "type": "SetNode",
+      "pos": [
+        4994.809533756293,
+        283.74186174819937
       ],
       "size": [
         210,
         60
       ],
       "flags": {
-        "collapsed": false
+        "collapsed": true
       },
-      "order": 45,
+      "order": 112,
       "mode": 0,
-      "inputs": [],
-      "outputs": [
+      "inputs": [
         {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            89
-          ]
+          "name": "MASK",
+          "type": "MASK",
+          "link": 50
         }
       ],
-      "title": "Get_wan_frames_output",
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_character_masks",
       "properties": {
+        "previousName": "character_masks",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.4.1",
@@ -5848,7 +5803,52 @@
         }
       },
       "widgets_values": [
-        "wan_frames_output"
+        "character_masks"
+      ],
+      "color": "#1c5715",
+      "bgcolor": "#1f401b"
+    },
+    {
+      "id": 71,
+      "type": "SetNode",
+      "pos": [
+        5034.860200732313,
+        442.5644872812204
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 116,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 65
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_bg_video",
+      "properties": {
+        "previousName": "bg_video",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.4.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "bg_video"
       ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
@@ -6696,14 +6696,6 @@
       "INT"
     ],
     [
-      136,
-      135,
-      0,
-      101,
-      0,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
       138,
       136,
       1,
@@ -6776,14 +6768,6 @@
       "INT"
     ],
     [
-      151,
-      143,
-      0,
-      101,
-      1,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
       153,
       143,
       0,
@@ -6806,6 +6790,22 @@
       96,
       0,
       "IMAGE"
+    ],
+    [
+      156,
+      143,
+      0,
+      101,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      157,
+      135,
+      0,
+      101,
+      1,
+      "INT,FLOAT,IMAGE,LATENT"
     ]
   ],
   "groups": [
@@ -6824,7 +6824,7 @@
     },
     {
       "id": 2,
-      "title": "输入",
+      "title": "Input",
       "bounding": [
         597.3936593507194,
         957.3593711026763,
@@ -6902,7 +6902,7 @@
     },
     {
       "id": 8,
-      "title": "预览",
+      "title": "Preview Masked",
       "bounding": [
         1451.0851918114708,
         958.7374243599191,
@@ -6915,7 +6915,7 @@
     },
     {
       "id": 9,
-      "title": "面部还原",
+      "title": "Face Remake",
       "bounding": [
         1931.9028757954754,
         1625.8129589090488,
@@ -6941,7 +6941,7 @@
     },
     {
       "id": 11,
-      "title": "输出",
+      "title": "Output",
       "bounding": [
         610.0411880459072,
         2038.3964877091632,
@@ -6969,13 +6969,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7513148009015777,
+      "scale": 0.9090909090909091,
       "offset": [
-        -585.1151642190077,
-        -221.58973641369377
+        -524.7030039668672,
+        -118.15105769349961
       ]
     },
-    "frontendVersion": "1.28.8",
+    "frontendVersion": "1.30.6",
     "ue_links": [],
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
