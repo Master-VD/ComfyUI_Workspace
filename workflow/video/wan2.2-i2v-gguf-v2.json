@@ -1,19 +1,19 @@
 {
   "id": "f6253d74-7eb2-4c27-a096-15ea12fc4351",
   "revision": 0,
-  "last_node_id": 91,
-  "last_link_id": 101,
+  "last_node_id": 93,
+  "last_link_id": 104,
   "nodes": [
     {
       "id": 16,
       "type": "PathchSageAttentionKJ",
       "pos": [
-        713.3842514492515,
+        715.9400580504669,
         510.0355090964734
       ],
       "size": [
         270,
-        58
+        82
       ],
       "flags": {},
       "order": 53,
@@ -35,9 +35,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "PathchSageAttentionKJ",
         "cnr_id": "comfyui-kjnodes",
         "ver": "1.1.9",
-        "Node name for S&R": "PathchSageAttentionKJ",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -45,7 +45,8 @@
         }
       },
       "widgets_values": [
-        "auto"
+        "auto",
+        false
       ]
     },
     {
@@ -57,7 +58,7 @@
       ],
       "size": [
         270,
-        58
+        82
       ],
       "flags": {},
       "order": 52,
@@ -79,9 +80,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "PathchSageAttentionKJ",
         "cnr_id": "comfyui-kjnodes",
         "ver": "1.1.9",
-        "Node name for S&R": "PathchSageAttentionKJ",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -89,7 +90,8 @@
         }
       },
       "widgets_values": [
-        "auto"
+        "auto",
+        false
       ]
     },
     {
@@ -167,9 +169,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
         "ver": "0.3.67",
-        "Node name for S&R": "LoadImage",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -207,9 +209,9 @@
       ],
       "title": "Duration (seconds)",
       "properties": {
+        "Node name for S&R": "INTConstant",
         "cnr_id": "comfyui-kjnodes",
         "ver": "1.1.9",
-        "Node name for S&R": "INTConstant",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -249,9 +251,9 @@
       ],
       "title": "Frame rate",
       "properties": {
+        "Node name for S&R": "INTConstant",
         "cnr_id": "comfyui-kjnodes",
         "ver": "1.1.9",
-        "Node name for S&R": "INTConstant",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -416,9 +418,9 @@
       ],
       "title": "Shortest side length",
       "properties": {
+        "Node name for S&R": "INTConstant",
         "cnr_id": "comfyui-kjnodes",
         "ver": "1.1.9",
-        "Node name for S&R": "INTConstant",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -457,9 +459,9 @@
       ],
       "title": "Total steps",
       "properties": {
+        "Node name for S&R": "INTConstant",
         "cnr_id": "comfyui-kjnodes",
         "ver": "1.1.9",
-        "Node name for S&R": "INTConstant",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -543,9 +545,9 @@
       ],
       "title": "High steps",
       "properties": {
+        "Node name for S&R": "INTConstant",
         "cnr_id": "comfyui-kjnodes",
         "ver": "1.1.9",
-        "Node name for S&R": "INTConstant",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -732,9 +734,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "GetImageSize",
         "cnr_id": "comfy-core",
         "ver": "0.3.67",
-        "Node name for S&R": "GetImageSize",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -963,94 +965,6 @@
       "bgcolor": "#29699c"
     },
     {
-      "id": 56,
-      "type": "KSamplerAdvanced",
-      "pos": [
-        2269.465566604872,
-        678.0606679927936
-      ],
-      "size": [
-        270,
-        334
-      ],
-      "flags": {},
-      "order": 60,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 70
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 48
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 49
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 50
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "widget": {
-            "name": "steps"
-          },
-          "link": 55
-        },
-        {
-          "name": "end_at_step",
-          "type": "INT",
-          "widget": {
-            "name": "end_at_step"
-          },
-          "link": 57
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            54
-          ]
-        }
-      ],
-      "title": "K采样器（高级）High",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.67",
-        "Node name for S&R": "KSamplerAdvanced",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "steps": true,
-            "end_at_step": true
-          },
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "enable",
-        0,
-        "randomize",
-        20,
-        2,
-        "euler",
-        "simple",
-        0,
-        10000,
-        "enable"
-      ]
-    },
-    {
       "id": 46,
       "type": "WanImageToVideo",
       "pos": [
@@ -1143,9 +1057,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "WanImageToVideo",
         "cnr_id": "comfy-core",
         "ver": "0.3.67",
-        "Node name for S&R": "WanImageToVideo",
         "ue_properties": {
           "widget_ue_connectable": {
             "width": true,
@@ -1447,95 +1361,6 @@
       "bgcolor": "#29699c"
     },
     {
-      "id": 57,
-      "type": "KSamplerAdvanced",
-      "pos": [
-        2555.903945814082,
-        618.3615258652081
-      ],
-      "size": [
-        270,
-        334
-      ],
-      "flags": {},
-      "order": 67,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 71
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 51
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 52
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 54
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "widget": {
-            "name": "steps"
-          },
-          "link": 56
-        },
-        {
-          "name": "start_at_step",
-          "type": "INT",
-          "widget": {
-            "name": "start_at_step"
-          },
-          "link": 58
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            59,
-            61
-          ]
-        }
-      ],
-      "title": "K采样器（高级）Low",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.67",
-        "Node name for S&R": "KSamplerAdvanced",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "steps": true,
-            "start_at_step": true
-          },
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "disable",
-        0,
-        "fixed",
-        20,
-        1,
-        "euler",
-        "simple",
-        0,
-        10000,
-        "disable"
-      ]
-    },
-    {
       "id": 62,
       "type": "VAEDecode",
       "pos": [
@@ -1571,9 +1396,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "VAEDecode",
         "cnr_id": "comfy-core",
         "ver": "0.3.67",
-        "Node name for S&R": "VAEDecode",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -1583,57 +1408,10 @@
       "widgets_values": []
     },
     {
-      "id": 60,
-      "type": "VRAMCleanup",
-      "pos": [
-        2893.6764221181274,
-        628.2795181419552
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 68,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "anything",
-          "type": "*",
-          "link": 59
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "*",
-          "links": [
-            60
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_memory_cleanup",
-        "ver": "1.1.1",
-        "Node name for S&R": "VRAMCleanup",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        true,
-        true
-      ]
-    },
-    {
       "id": 61,
       "type": "RAMCleanup",
       "pos": [
-        2900.676347643525,
+        2889.5041133301092,
         682.3488113398282
       ],
       "size": [
@@ -1643,7 +1421,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 70,
+      "order": 73,
       "mode": 0,
       "inputs": [
         {
@@ -1660,9 +1438,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "RAMCleanup",
         "cnr_id": "comfyui_memory_cleanup",
         "ver": "1.1.1",
-        "Node name for S&R": "RAMCleanup",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -1690,7 +1468,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 71,
+      "order": 72,
       "mode": 0,
       "inputs": [
         {
@@ -1802,184 +1580,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 18,
-      "type": "ModelSamplingSD3",
-      "pos": [
-        774.2813270380577,
-        605.1700573306437
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 59,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 15
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            69
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.67",
-        "Node name for S&R": "ModelSamplingSD3",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        8
-      ]
-    },
-    {
-      "id": 17,
-      "type": "ModelSamplingSD3",
-      "pos": [
-        775.8655582233615,
-        359.30420365740207
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {},
-      "order": 58,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 14
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            68
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.67",
-        "Node name for S&R": "ModelSamplingSD3",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        8
-      ]
-    },
-    {
-      "id": 64,
-      "type": "SetNode",
-      "pos": [
-        1018.286441600229,
-        388.502082822949
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 65,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "link": 68
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_model_high",
-      "properties": {
-        "previousName": "model_high",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "model_high"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 65,
-      "type": "SetNode",
-      "pos": [
-        1023.900531853132,
-        634.9489579604391
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 66,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "link": 69
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_model_low",
-      "properties": {
-        "previousName": "model_low",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "model_low"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 20,
       "type": "VAELoader",
       "pos": [
@@ -2004,9 +1604,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "VAELoader",
         "cnr_id": "comfy-core",
         "ver": "0.3.67",
-        "Node name for S&R": "VAELoader",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -2127,9 +1727,9 @@
       ],
       "outputs": [],
       "properties": {
+        "Node name for S&R": "PreviewImage",
         "cnr_id": "comfy-core",
         "ver": "0.3.67",
-        "Node name for S&R": "PreviewImage",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -2175,9 +1775,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "VFI FloatToInt",
         "cnr_id": "comfyui-frame-interpolation",
         "ver": "1.0.7",
-        "Node name for S&R": "VFI FloatToInt",
         "ue_properties": {
           "widget_ue_connectable": {
             "float": true
@@ -2299,90 +1899,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 81,
-      "type": "VHS_VideoCombine",
-      "pos": [
-        -72.02809466784755,
-        1640.4794058627083
-      ],
-      "size": [
-        425.34239692148276,
-        334
-      ],
-      "flags": {},
-      "order": 46,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 86
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": null
-        },
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "name": "frame_rate",
-          "type": "FLOAT",
-          "widget": {
-            "name": "frame_rate"
-          },
-          "link": 88
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
-        "ver": "1.7.7",
-        "Node name for S&R": "VHS_VideoCombine",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "frame_rate": true
-          },
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": {
-        "frame_rate": 16,
-        "loop_count": 0,
-        "filename_prefix": "wan2/i2v/%date:yyyy-MM-dd%_main",
-        "format": "video/h264-mp4",
-        "pix_fmt": "yuv420p",
-        "crf": 10,
-        "save_metadata": true,
-        "trim_to_audio": false,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
-      }
-    },
-    {
       "id": 74,
       "type": "RIFE VFI",
       "pos": [
@@ -2435,9 +1951,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "RIFE VFI",
         "cnr_id": "comfyui-frame-interpolation",
         "ver": "1.0.7",
-        "Node name for S&R": "RIFE VFI",
         "ue_properties": {
           "widget_ue_connectable": {
             "clear_cache_after_n_frames": true,
@@ -2573,92 +2089,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 82,
-      "type": "VHS_VideoCombine",
-      "pos": [
-        403.90254705894483,
-        1640.4794058627083
-      ],
-      "size": [
-        424.29471045969757,
-        334
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 45,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 89
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": null
-        },
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "name": "frame_rate",
-          "type": "FLOAT",
-          "widget": {
-            "name": "frame_rate"
-          },
-          "link": 90
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
-        "ver": "1.7.7",
-        "Node name for S&R": "VHS_VideoCombine",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "frame_rate": true
-          },
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": {
-        "frame_rate": 16,
-        "loop_count": 0,
-        "filename_prefix": "wan2/i2v/%date:yyyy-MM-dd%_output",
-        "format": "video/h264-mp4",
-        "pix_fmt": "yuv420p",
-        "crf": 10,
-        "save_metadata": false,
-        "trim_to_audio": false,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
-      }
-    },
-    {
       "id": 89,
       "type": "UnetLoaderGGUF",
       "pos": [
@@ -2683,9 +2113,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "UnetLoaderGGUF",
         "cnr_id": "comfyui-gguf",
         "ver": "1.1.6",
-        "Node name for S&R": "UnetLoaderGGUF",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -2723,9 +2153,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "UnetLoaderGGUF",
         "cnr_id": "comfyui-gguf",
         "ver": "1.1.6",
-        "Node name for S&R": "UnetLoaderGGUF",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -2764,9 +2194,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "CLIPLoaderGGUF",
         "cnr_id": "comfyui-gguf",
         "ver": "1.1.6",
-        "Node name for S&R": "CLIPLoaderGGUF",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -2779,79 +2209,6 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 12,
-      "type": "Power Lora Loader (rgthree)",
-      "pos": [
-        311.7645704954631,
-        262.7855440594802
-      ],
-      "size": [
-        388.3920448369595,
-        142
-      ],
-      "flags": {},
-      "order": 40,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "model",
-          "type": "MODEL",
-          "link": 97
-        },
-        {
-          "dir": 3,
-          "name": "clip",
-          "type": "CLIP",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "name": "MODEL",
-          "shape": 3,
-          "type": "MODEL",
-          "links": [
-            12
-          ]
-        },
-        {
-          "dir": 4,
-          "name": "CLIP",
-          "shape": 3,
-          "type": "CLIP",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "rgthree-comfy",
-        "ver": "1.0.2511111955",
-        "Show Strengths": "Single Strength",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        {},
-        {
-          "type": "PowerLoraLoaderHeaderWidget"
-        },
-        {
-          "on": true,
-          "lora": "LightX2V\\wan2.2_i2v_A14b_high_noise_lora_rank64_lightx2v_4step_1022.safetensors",
-          "strength": 1,
-          "strengthTwo": null
-        },
-        {},
-        ""
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
     },
     {
       "id": 13,
@@ -2900,9 +2257,9 @@
         }
       ],
       "properties": {
+        "Show Strengths": "Single Strength",
         "cnr_id": "rgthree-comfy",
         "ver": "1.0.2511111955",
-        "Show Strengths": "Single Strength",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -3045,9 +2402,9 @@
       ],
       "title": "Output frame rate",
       "properties": {
+        "Node name for S&R": "INTConstant",
         "cnr_id": "comfyui-kjnodes",
         "ver": "1.1.9",
-        "Node name for S&R": "INTConstant",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -3284,6 +2641,341 @@
       "bgcolor": "#353"
     },
     {
+      "id": 45,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1189.7416354484649,
+        865.6546973222584
+      ],
+      "size": [
+        495.1882357531065,
+        169.33331298828125
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 99
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Negative Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，马赛克，卡通崩坏，绘制错误，\nbad anatomy, bad proportions, malformed limbs, ugly, mutilated, \nsignature, watermark, username, overlay, stamp, \nNo nipples, bad nipples, pubic hair,\ndeformed reproductive organs, \nmutated reproductive organs, "
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 44,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1189.686486906046,
+        617.2139049547799
+      ],
+      "size": [
+        495.7722339260197,
+        207.9999761239361
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 98
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Very high quality 4k digital animation, This is a masterpiece of the best quality."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 17,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        775.9400580504669,
+        383.7602418416826
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            68
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        8
+      ]
+    },
+    {
+      "id": 64,
+      "type": "SetNode",
+      "pos": [
+        1018.8667771069836,
+        412.441287759866
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_model_high",
+      "properties": {
+        "previousName": "model_high",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "model_high"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 18,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        775.9400580504669,
+        629.2372908333994
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            69
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        8
+      ]
+    },
+    {
+      "id": 65,
+      "type": "SetNode",
+      "pos": [
+        1023.0857942576149,
+        658.0692676881574
+      ],
+      "size": [
+        210.467296676042,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_model_low",
+      "properties": {
+        "previousName": "model_low",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "model_low"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 42,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        1842.359418257874,
+        451.74380475626015
+      ],
+      "size": [
+        216.0105184072122,
+        128
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 34
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 35
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            29
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "round(b * (c / min(a,b)) / 2) * 2"
+      ]
+    },
+    {
       "id": 40,
       "type": "MathExpression|pysssss",
       "pos": [
@@ -3418,9 +3110,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "ImageResizeKJv2",
         "cnr_id": "comfyui-kjnodes",
         "ver": "1.1.9",
-        "Node name for S&R": "ImageResizeKJv2",
         "ue_properties": {
           "widget_ue_connectable": {
             "width": true,
@@ -3433,7 +3125,7 @@
       "widgets_values": [
         512,
         512,
-        "area",
+        "lanczos",
         "crop",
         "0, 0, 0",
         "center",
@@ -3442,150 +3134,225 @@
       ]
     },
     {
-      "id": 45,
-      "type": "CLIPTextEncode",
+      "id": 81,
+      "type": "VHS_VideoCombine",
       "pos": [
-        1189.7416354484649,
-        865.6546973222584
+        -72.02809466784755,
+        1640.4794058627083
       ],
       "size": [
-        495.1882357531065,
-        169.33331298828125
+        425.34239692148276,
+        334
       ],
       "flags": {},
-      "order": 43,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 99
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            39
-          ]
-        }
-      ],
-      "title": "CLIP Text Encode (Negative Prompt)",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.67",
-        "Node name for S&R": "CLIPTextEncode",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，马赛克，卡通崩坏，绘制错误，\nbad anatomy, bad proportions, malformed limbs, ugly, mutilated, \nsignature, watermark, username, overlay, stamp, \nNo nipples, bad nipples, pubic hair,\ndeformed reproductive organs, \nmutated reproductive organs, "
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 42,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        1842.359418257874,
-        451.74380475626015
-      ],
-      "size": [
-        216.0105184072122,
-        128
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 50,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 34
+          "name": "images",
+          "type": "IMAGE",
+          "link": 86
         },
         {
-          "name": "b",
+          "name": "audio",
           "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 35
+          "type": "AUDIO",
+          "link": null
         },
         {
-          "name": "c",
+          "name": "meta_batch",
           "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 36
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            29
-          ]
+          "type": "VHS_BatchManager",
+          "link": null
         },
         {
-          "name": "FLOAT",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
           "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
           "links": null
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-custom-scripts",
-        "ver": "1.2.5",
+        "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.7",
         "ue_properties": {
-          "widget_ue_connectable": {},
+          "widget_ue_connectable": {
+            "frame_rate": true
+          },
           "version": "7.5.1",
           "input_ue_unconnectable": {}
         }
       },
-      "widgets_values": [
-        "round(b * (c / min(a,b)) / 2) * 2"
-      ]
+      "widgets_values": {
+        "frame_rate": 16,
+        "loop_count": 0,
+        "filename_prefix": "wan2/i2v/%date:yyyy_MM_dd%-i2v_main",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 10,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      }
     },
     {
-      "id": 44,
-      "type": "CLIPTextEncode",
+      "id": 82,
+      "type": "VHS_VideoCombine",
       "pos": [
-        1189.686486906046,
-        617.2139049547799
+        403.90254705894483,
+        1640.4794058627083
       ],
       "size": [
-        495.7722339260197,
-        207.9999761239361
+        424.29471045969757,
+        334
       ],
-      "flags": {},
-      "order": 42,
+      "flags": {
+        "collapsed": false
+      },
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 98
+          "name": "images",
+          "type": "IMAGE",
+          "link": 89
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 90
         }
       ],
       "outputs": [
         {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            38
-          ]
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
         }
       ],
-      "title": "CLIP Text Encode (Prompt)",
       "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.67",
-        "Node name for S&R": "CLIPTextEncode",
+        "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.7",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "frame_rate": true
+          },
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 16,
+        "loop_count": 0,
+        "filename_prefix": "wan2/i2v/%date:yyyy_MM_dd%-i2v_out",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 10,
+        "save_metadata": false,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      }
+    },
+    {
+      "id": 12,
+      "type": "Power Lora Loader (rgthree)",
+      "pos": [
+        311.7645704954631,
+        262.7855440594802
+      ],
+      "size": [
+        388.3920448369595,
+        142
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "model",
+          "type": "MODEL",
+          "link": 97
+        },
+        {
+          "dir": 3,
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": [
+            12
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Show Strengths": "Single Strength",
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2511111955",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.1",
@@ -3593,10 +3360,336 @@
         }
       },
       "widgets_values": [
-        "Very high quality 4k digital animation, This is a masterpiece of the best quality."
+        {},
+        {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        {
+          "on": true,
+          "lora": "LightX2V\\wan2.2_i2v_A14b_high_noise_lora_rank64_lightx2v_4step_1022.safetensors",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        {},
+        ""
       ],
-      "color": "#232",
-      "bgcolor": "#353"
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 56,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        2269.465566604872,
+        678.0606679927936
+      ],
+      "size": [
+        270,
+        334
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 70
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 48
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 49
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 50
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 55
+        },
+        {
+          "name": "end_at_step",
+          "type": "INT",
+          "widget": {
+            "name": "end_at_step"
+          },
+          "link": 57
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            54,
+            102
+          ]
+        }
+      ],
+      "title": "K采样器（高级）High",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "steps": true,
+            "end_at_step": true
+          },
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "enable",
+        0,
+        "randomize",
+        20,
+        2,
+        "euler",
+        "simple",
+        0,
+        10000,
+        "enable"
+      ]
+    },
+    {
+      "id": 93,
+      "type": "RAMCleanup",
+      "pos": [
+        2763.3572747993844,
+        1009.3447169820363
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 103
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RAMCleanup",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        true,
+        true,
+        true,
+        3
+      ]
+    },
+    {
+      "id": 92,
+      "type": "VRAMCleanup",
+      "pos": [
+        2566.99374940876,
+        1009.3447169820363
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 102
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            103
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VRAMCleanup",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        true,
+        true
+      ]
+    },
+    {
+      "id": 57,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        2555.903945814082,
+        619.062513664171
+      ],
+      "size": [
+        270,
+        334
+      ],
+      "flags": {},
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 71
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 51
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 52
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 54
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 56
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "widget": {
+            "name": "start_at_step"
+          },
+          "link": 58
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            61,
+            104
+          ]
+        }
+      ],
+      "title": "K采样器（高级）Low",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.67",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "steps": true,
+            "start_at_step": true
+          },
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "disable",
+        0,
+        "fixed",
+        20,
+        1,
+        "euler",
+        "simple",
+        0,
+        10000,
+        "disable"
+      ]
+    },
+    {
+      "id": 60,
+      "type": "VRAMCleanup",
+      "pos": [
+        2889.5041133301092,
+        628.2795181419552
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 70,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 104
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            60
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VRAMCleanup",
+        "cnr_id": "comfyui_memory_cleanup",
+        "ver": "1.1.1",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        true,
+        true
+      ]
     }
   ],
   "links": [
@@ -3953,14 +4046,6 @@
       "INT"
     ],
     [
-      59,
-      57,
-      0,
-      60,
-      0,
-      "*"
-    ],
-    [
       60,
       60,
       0,
@@ -4175,6 +4260,30 @@
       78,
       0,
       "IMAGE"
+    ],
+    [
+      102,
+      56,
+      0,
+      92,
+      0,
+      "LATENT"
+    ],
+    [
+      103,
+      92,
+      0,
+      93,
+      0,
+      "*"
+    ],
+    [
+      104,
+      57,
+      0,
+      60,
+      0,
+      "LATENT"
     ]
   ],
   "groups": [
@@ -4273,18 +4382,19 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.8264462809917354,
+      "scale": 1,
       "offset": [
-        160.40150494801628,
-        -95.94644764813584
+        144.00946477925754,
+        -94.34056004853204
       ]
     },
-    "frontendVersion": "1.30.6",
+    "frontendVersion": "1.35.9",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
-    "ue_links": []
+    "ue_links": [],
+    "workflowRendererVersion": "LG"
   },
   "version": 0.4
 }
